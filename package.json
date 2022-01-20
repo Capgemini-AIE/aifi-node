@@ -1,0 +1,25 @@
+{
+  "name": "aifi",
+  "version": "1.0.0",
+  "description": "Aifi API wrapper",
+  "main": "lib/aifi.js",
+  "repository": "https://github.com/Capgemini-AIE/aifi-node",
+  "author": "Graham Taylor",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx,.ts ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "node-fetch": "^3.1.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@types/node": "^17.0.9",
+    "qs": "^6.10.3"
+  }
+}

@@ -2,19 +2,39 @@
   "name": "aifi",
   "version": "1.0.0",
   "description": "Aifi API wrapper",
+  "keywords": [
+    "aifi",
+    "frictionless checkout",
+    "seamless checkout",
+    "api"
+  ],
   "main": "lib/aifi.js",
   "repository": "https://github.com/Capgemini-AIE/aifi-node",
   "author": "Graham Taylor",
   "license": "MIT",
+  "engines": {
+    "node": ">=10.*"
+  },
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts ."
+    "clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
+    "test": "node index.js",
+    "mocha": "nyc mocha --config=test/.mocharc.js",
+    "mocha-only": "mocha --config=test/.mocharc.js",
+    "lint": "eslint --ext .js,.jsx,.ts .",
+    "fix": "yarn lint --fix",
+    "report": "nyc -r text -r lcov report"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.9.1",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^9.1.4",
+    "mocha-junit-reporter": "^2.0.2",
     "node-fetch": "^3.1.1",
+    "nyc": "^15.1.0",
     "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   },

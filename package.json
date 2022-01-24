@@ -20,6 +20,28 @@
   "engines": {
     "node": ">=10.*"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
   "scripts": {
     "clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
     "test": "yarn lint && yarn mocha",
@@ -27,12 +49,16 @@
     "mocha-only": "mocha --config=test/.mocharc.js",
     "lint": "eslint --ext .js,.jsx,.ts .",
     "fix": "yarn lint --fix",
-    "report": "nyc -r text -r lcov report"
+    "report": "nyc -r text -r lcov report",
+    "release": "release-it"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^16.0.0",
+    "@release-it/conventional-changelog": "^4.1.0",
     "@typescript-eslint/parser": "^5.9.1",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
+    "commitlint": "^16.1.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
@@ -42,6 +68,7 @@
     "node-fetch": "^3.1.1",
     "nyc": "^15.1.0",
     "prettier": "^2.5.1",
+    "release-it": "^14.12.4",
     "typescript": "^4.5.4"
   },
   "dependencies": {

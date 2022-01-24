@@ -49,6 +49,29 @@ const aifi = new Aifi('aifi_test_...');
 })();
 ```
 
+### Usage with TypeScript
+
+Aifi maintains types for the latest API version
+
+Import Aifi as a default import and instantiate it as `new Aifi()`
+
+```ts
+import Aifi from 'aifi';
+const stripe = new Stripe('aifi_token_...');
+
+const createCustomer = async () => {
+  const params: Aifi.CustomerCreateParams = {
+    email: 'customer@example.com',
+    password: '123456789',
+  };
+
+  const customer: Aifi.Customer = await aifi.admin.customers.create(params);
+
+  console.log(customer.id);
+};
+createCustomer();
+```
+
 ## Development
 
 Run all tests:

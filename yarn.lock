@@ -726,6 +726,11 @@ eslint-config-prettier@^8.3.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
   integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
 
+eslint-plugin-chai-friendly@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-chai-friendly/-/eslint-plugin-chai-friendly-0.7.2.tgz#0ebfbb2c1244f5de2997f3963d155758234f2b0f"
+  integrity sha512-LOIfGx5sZZ5FwM1shr2GlYAWV9Omdi+1/3byuVagvQNoGUuU0iHhp7AfjA1uR+4dJ4Isfb4+FwBJgQajIw9iAg==
+
 eslint-plugin-prettier@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-4.0.0.tgz#8b99d1e4b8b24a762472b4567992023619cb98e0"

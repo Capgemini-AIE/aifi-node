@@ -24,9 +24,7 @@ describe('utils', () => {
   describe('extractUrlParams', () => {
     it('works with multiple params', () => {
       expect(
-        utils.extractUrlParams(
-          'stores/{storeId}/planogram/{gondolaId}'
-        )
+        utils.extractUrlParams('stores/{storeId}/planogram/{gondolaId}')
       ).to.deep.equal(['storeId', 'gondolaId']);
     });
   });
@@ -120,7 +118,7 @@ describe('utils', () => {
       function A() {}
       A.extend = utils.protoExtend;
       const B = A.extend({
-        constructor: function() {
+        constructor: function () {
           this.called = true;
         },
       });

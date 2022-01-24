@@ -13,7 +13,7 @@ describe('Admin', () => {
           hmac: '123',
           shop: 'nanostore-beta.myshopify.com',
           timestamp: '1555685958',
-          locale: 'pl'
+          locale: 'pl',
         });
         expect(aifi.LAST_REQUEST).to.deep.equal({
           method: 'GET',

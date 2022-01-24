@@ -8,9 +8,9 @@ const expect = require('chai').expect;
 describe('Error', () => {
   describe('AifiError', () => {
     it('Generates specific instance depending on error-type', () => {
-      expect(Error.AifiError.generate({type: 'E_UNAUTHORIZED'})).to.be.instanceOf(
-        Error.AifiAuthenticationError
-      );
+      expect(
+        Error.AifiError.generate({type: 'E_UNAUTHORIZED'})
+      ).to.be.instanceOf(Error.AifiAuthenticationError);
     });
 
     it('Pulls in headers', () => {

@@ -24,16 +24,13 @@ const utils = (module.exports = {
     });
     server.listen(0, () => {
       const {port} = server.address();
-      const aifi = require('../lib/aifi')(
-        module.exports.getUserAifiKey(),
-        {
-          host: 'localhost',
-          port,
-          protocol: 'http',
-          httpAgent: testingHttpAgent,
-          ...clientOptions,
-        }
-      );
+      const aifi = require('../lib/aifi')(module.exports.getUserAifiKey(), {
+        host: 'localhost',
+        port,
+        protocol: 'http',
+        httpAgent: testingHttpAgent,
+        ...clientOptions,
+      });
       return callback(null, aifi, () => {
         server.close();
       });
@@ -83,7 +80,15 @@ const utils = (module.exports = {
     }
 
     function patchRequest(aifiInstance, instance) {
-      instance._request = function(method, host, url, data, auth, options, cb) {
+      instance._request = function (
+        method,
+        host,
+        url,
+        data,
+        auth,
+        options,
+        cb
+      ) {
         const req = (aifiInstance.LAST_REQUEST = {
           method,
           url,
@@ -130,11 +135,8 @@ const utils = (module.exports = {
     function CleanupUtility(timeout) {
       const self = this;
       this._cleanupFns = [];
-      this._aifi = require('../lib/aifi')(
-        utils.getUserAifiKey(),
-        'latest'
-      );
-      afterEach(function(done) {
+      this._aifi = require('../lib/aifi')(utils.getUserAifiKey(), 'latest');
+      afterEach(function (done) {
         this.timeout(timeout || CleanupUtility.DEFAULT_TIMEOUT);
         return self.doCleanup(done);
       });
@@ -175,7 +177,7 @@ const utils = (module.exports = {
         this._cleanupFns.push(fn);
       },
       deleteCustomer(custId) {
-        this.add(function() {
+        this.add(function () {
           return this._aifi.customers.del(custId);
         });
       },
@@ -188,9 +190,7 @@ const utils = (module.exports = {
    * Get a random string for test Object creation
    */
   getRandomString: () => {
-    return Math.random()
-      .toString(36)
-      .slice(2);
+    return Math.random().toString(36).slice(2);
   },
 
   envSupportsForAwait: () => {

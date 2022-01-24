@@ -57,7 +57,7 @@ Import Aifi as a default import and instantiate it as `new Aifi()`
 
 ```ts
 import Aifi from 'aifi';
-const stripe = new Stripe('aifi_token_...');
+const aifi = new Aifi('aifi_token_...');
 
 const createCustomer = async () => {
   const params: Aifi.CustomerCreateParams = {
@@ -70,6 +70,43 @@ const createCustomer = async () => {
   console.log(customer.id);
 };
 createCustomer();
+```
+
+### `request` and `response` events
+
+The Aifi object emits `request` and `response` events. You can use them like this:
+
+```js
+const aifi = require('aifi')('aifi_token_...');
+
+const onRequest = (request) => {
+  // Do something.
+};
+
+// Add the event handler function:
+aifi.on('request', onRequest);
+
+// Remove the event handler function:
+aifi.off('request', onRequest);
+```
+
+#### `request` object
+
+```js
+{
+  method: 'POST',
+  path: '/v1/customers',
+}
+```
+
+#### `response` object
+
+```js
+{
+  method: 'POST',
+  path: '/v1/customers',
+  status: 402,
+}
 ```
 
 ## Development

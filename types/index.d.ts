@@ -24,18 +24,12 @@ declare module 'aifi' {
     static errors: Aifi.Errors;
     errors: Aifi.Errors;
 
-    // on(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
-    // on(event: 'response', handler: (event: Aifi.ResponseEvent) => void): void;
-    // once(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
-    // once(
-    //   event: 'response',
-    //   handler: (event: Aifi.ResponseEvent) => void
-    // ): void;
-    // off(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
-    // off(
-    //   event: 'response',
-    //   handler: (event: Aifi.ResponseEvent) => void
-    // ): void;
+    on(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
+    on(event: 'response', handler: (event: Aifi.ResponseEvent) => void): void;
+    once(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
+    once(event: 'response', handler: (event: Aifi.ResponseEvent) => void): void;
+    off(event: 'request', handler: (event: Aifi.RequestEvent) => void): void;
+    off(event: 'response', handler: (event: Aifi.ResponseEvent) => void): void;
 
     setProtocol(protocol: string): void;
   }

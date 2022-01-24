@@ -5,7 +5,7 @@ applications written in server-side JavaScript.
 
 ## Requirements
 
-Node 10 or higher.
+Node 12 or higher.
 
 ## Installation
 

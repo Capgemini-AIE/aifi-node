@@ -26,6 +26,7 @@ declare module 'aifi' {
         path?: string;
         fullPath?: string;
         methodType?: 'list' | 'search';
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       }): (...args: any[]) => Response<ResponseObject>;
     }
 

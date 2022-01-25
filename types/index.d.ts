@@ -1,6 +1,7 @@
 ///<reference path='./lib.d.ts' />
 ///<reference path='./Errors.d.ts' />
 ///<reference path='./Admin/Auth.d.ts' />
+///<reference path='./Admin/Customers.d.ts' />
 
 declare module 'aifi' {
   export namespace Aifi {}

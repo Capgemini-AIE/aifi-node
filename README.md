@@ -109,6 +109,17 @@ aifi.off('request', onRequest);
 }
 ```
 
+### Using with a custom fetch client
+
+```
+const Aifi = require("aifi");
+
+const aifi = Aifi('<API Token>', {
+  // Cloudflare Workers use the Fetch API for their API requests.
+  httpClient: Aifi.createFetchHttpClient()
+});
+```
+
 ## Development
 
 Run all tests:

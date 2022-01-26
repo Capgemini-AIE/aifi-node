@@ -1,6 +1,6 @@
 {
   "name": "aifi",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Aifi API wrapper",
   "keywords": [
     "aifi",
@@ -32,7 +32,7 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": false
     },
     "github": {
       "release": true

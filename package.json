@@ -45,13 +45,14 @@
   },
   "scripts": {
     "clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
-    "test": "yarn lint && yarn mocha",
+    "fix": "yarn lint --fix",
+    "lint": "eslint --ext .js,.jsx,.ts .",
     "mocha": "nyc mocha --config=test/.mocharc.js",
     "mocha-only": "mocha --config=test/.mocharc.js",
-    "lint": "eslint --ext .js,.jsx,.ts .",
-    "fix": "yarn lint --fix",
     "report": "nyc -r text -r lcov report",
-    "release": "release-it"
+    "release": "release-it",
+    "test": "yarn lint && yarn test-typescript && yarn mocha",
+    "test-typescript": "tsc --build types/test"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^16.0.0",

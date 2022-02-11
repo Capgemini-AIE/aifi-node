@@ -1,4 +1,5 @@
 ///<reference path='./lib.d.ts' />
+///<reference path='./net/net.d.ts' />
 ///<reference path='./Errors.d.ts' />
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />
@@ -18,7 +19,9 @@ declare module 'aifi' {
      */
     admin: {
       auth: Aifi.Admin.AuthResource;
+      customers: Aifi.Admin.CustomersResource;
     };
+
     /**
      * API Errors
      */

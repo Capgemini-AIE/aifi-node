@@ -105,8 +105,14 @@ declare module 'aifi' {
          */
         phone?: string;
 
+        /**
+         * Customer card data.
+         */
         card?: Customer.Card;
 
+        /**
+         * Customers role.
+         */
         role?: Customer.Role;
 
         /**

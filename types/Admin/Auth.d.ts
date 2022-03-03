@@ -1,6 +1,6 @@
 declare module 'aifi' {
   namespace Aifi {
-    namespace Admin {
+    namespace Customer {
       /**
        * The Auth token object.
        */

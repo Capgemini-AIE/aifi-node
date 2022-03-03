@@ -3,6 +3,8 @@
 ///<reference path='./Errors.d.ts' />
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />
+///<reference path='./Customer/Orders.d.ts' />
+///<reference path='./Customer/Products.d.ts' />
 
 declare module 'aifi' {
   export namespace Aifi {}

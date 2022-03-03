@@ -1,10 +1,24 @@
 ///<reference path='./lib.d.ts' />
 ///<reference path='./net/net.d.ts' />
 ///<reference path='./Errors.d.ts' />
+
+// Models shared types
+///<reference path='./Models/Contest.d.ts'/>
+///<reference path='./Models/Customer.d.ts'/>
+///<reference path='./Models/Card.d.ts'/>
+///<reference path='./Models/Order.d.ts'/>
+///<reference path='./Models/Product.d.ts'/>
+
+// API specific resource types
+// Admin resource
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />
+// Customer resource
+///<reference path='./Customer/Contests.d.ts' />
+///<reference path='./Customer/Customers.d.ts' />
 ///<reference path='./Customer/Orders.d.ts' />
 ///<reference path='./Customer/Products.d.ts' />
+// Orders resource
 
 declare module 'aifi' {
   export namespace Aifi {}
@@ -22,6 +36,13 @@ declare module 'aifi' {
     admin: {
       auth: Aifi.Admin.AuthResource;
       customers: Aifi.Admin.CustomersResource;
+    };
+
+    customer: {
+      contests: Aifi.Customer.ContestsResource;
+      customers: Aifi.Customer.CustomersResource;
+      products: Aifi.Customer.ProductsResource;
+      orders: Aifi.Customer.OrdersResource;
     };
 
     /**

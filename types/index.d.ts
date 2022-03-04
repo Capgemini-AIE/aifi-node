@@ -7,9 +7,10 @@
 ///<reference path='./Models/Customer.d.ts'/>
 ///<reference path='./Models/Card.d.ts'/>
 ///<reference path='./Models/Order.d.ts'/>
+///<reference path='./Models/Pagination.d.ts'/>
 ///<reference path='./Models/Product.d.ts'/>
 
-// API specific resource types
+// Resource Types
 // Admin resource
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />

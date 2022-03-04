@@ -1,38 +1,18 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Customer {
-      interface PaginationParams {
-        /**
-         * Count
-         */
-        count?: number;
-
-        /**
-         * Sort oder ASC ascending or DESC descending
-         */
-        direction?: string;
-
-        /**
-         * Pagination after
-         */
-        after?: string;
-
-        /**
-         * Pagination before
-         */
-        before?: string;
-
-        /**
-         * Id of the store where the order was placed
-         */
-        storeId?: number;
-      }
+      /**
+       * Shape/structure for PaginatedListResponse
+       */
+      type PaginatedListResponse = Array<
+        Aifi.Models.Order[] | Aifi.Models.PaginationResponse
+      >;
 
       class OrdersResource {
         list(
-          params: PaginationParams,
+          params: Aifi.Models.PaginatedParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Order[]>>;
+        ): Promise<Aifi.Response<PaginatedListResponse>>;
         // TODO: Pagination Questions?! How?!
 
         retrieve(
@@ -46,9 +26,9 @@ declare module 'aifi' {
         ): Promise<Aifi.Response<Aifi.Models.PaymentDetails>>;
 
         listDrafts(
-          params: PaginationParams,
+          params: Aifi.Models.PaginatedParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Order[]>>;
+        ): Promise<Aifi.Response<PaginatedListResponse>>;
 
         retrieveDraft(
           draftOrderID: string,

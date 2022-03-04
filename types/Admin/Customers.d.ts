@@ -1,6 +1,8 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Admin {
+      interface Customer extends Aifi.Models.Customer {}
+
       interface CustomerEntryCode {
         code: string;
       }

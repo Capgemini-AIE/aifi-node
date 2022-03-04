@@ -2,7 +2,7 @@
 ///<reference path='./net/net.d.ts' />
 ///<reference path='./Errors.d.ts' />
 
-// Models shared types
+// Models
 ///<reference path='./Models/Contest.d.ts'/>
 ///<reference path='./Models/Customer.d.ts'/>
 ///<reference path='./Models/Card.d.ts'/>

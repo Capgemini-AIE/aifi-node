@@ -40,7 +40,7 @@ declare module 'aifi' {
         create(
           params: ProductCreateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Model.Product>>;
+        ): Promise<Aifi.Response<Aifi.Models.Product>>;
       }
     }
   }

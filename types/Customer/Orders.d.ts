@@ -1,46 +1,59 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Customer {
-      interface OrderCreateParams {
+      interface PaginationParams {
         /**
-         * The customer's email address.
+         * Count
          */
-        email: string;
+        count?: number;
 
         /**
-         * The customer's email address.
+         * Sort oder ASC ascending or DESC descending
          */
-        password: string;
+        direction?: string;
 
         /**
-         * The customer's first name.
+         * Pagination after
          */
-        firstName?: string;
+        after?: string;
 
         /**
-         * The customer's last name.
+         * Pagination before
          */
-        lastName?: string;
+        before?: string;
 
         /**
-         * The customer's phone number.
+         * Id of the store where the order was placed
          */
-        phone?: string;
-
-        /**
-         * A reference to a unique external identified for the customer.
-         */
-        externalId?: string;
+        storeId?: number;
       }
 
       class OrdersResource {
-        /**
-         * Retrieves an auth token.
-         */
-        create(
-          params: OrderCreateParams,
+        list(
+          params: PaginationParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Model.Order>>;
+        ): Promise<Aifi.Response<Aifi.Models.Order[]>>;
+        // TODO: Pagination Questions?! How?!
+
+        retrieve(
+          orderId: string, // ATT: Make sure id's are url encoded
+          options?: RequestOptions
+        ): Promise<Aifi.Response<Aifi.Models.Order>>;
+
+        payment(
+          orderId: string,
+          options?: RequestOptions
+        ): Promise<Aifi.Response<Aifi.Models.PaymentDetails>>;
+
+        listDrafts(
+          params: PaginationParams,
+          options?: RequestOptions
+        ): Promise<Aifi.Response<Aifi.Models.Order[]>>;
+
+        retrieveDraft(
+          draftOrderID: string,
+          options?: RequestOptions
+        ): Promise<Aifi.Response<Aifi.Models.Order>>;
       }
     }
   }

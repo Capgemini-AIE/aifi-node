@@ -1,41 +1,6 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Admin {
-      /**
-       * The Customer object.
-       */
-      interface Customer {
-        /**
-         * Unique identifier for the object.
-         */
-        id: string;
-
-        /**
-         * The customer's email address.
-         */
-        email: string;
-
-        /**
-         * The customer's first name.
-         */
-        firstName?: string;
-
-        /**
-         * The customer's last name.
-         */
-        lastName?: string;
-
-        /**
-         * The customer's phone number.
-         */
-        phone?: string;
-
-        /**
-         * A reference to a unique external identified for the customer.
-         */
-        externalId?: string;
-      }
-
       interface CustomerEntryCode {
         code: string;
       }
@@ -175,7 +140,7 @@ declare module 'aifi' {
         create(
           params: CustomerCreateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.Customer>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
 
         /**
          * Retrieves a Customer object.
@@ -183,7 +148,7 @@ declare module 'aifi' {
         retrieve(
           customerId: string,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.Customer>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
 
         /**
          * Updates the specified customer by setting the values of the parameters passed.
@@ -192,7 +157,7 @@ declare module 'aifi' {
           customerId: string,
           params?: CustomerUpdateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.Customer>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
 
         /**
          * Creates a store entry code for that customer
@@ -201,7 +166,7 @@ declare module 'aifi' {
           customerId: string,
           params?: CustomerCreateEntryCodeParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.CustomerEntryCode>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
       }
     }
   }

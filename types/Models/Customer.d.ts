@@ -1,6 +1,6 @@
 declare module 'aifi' {
   namespace Aifi {
-    namespace Model {
+    namespace Models {
       /**
        * The Customer object.
        */
@@ -43,7 +43,7 @@ declare module 'aifi' {
         /**
          * The credit card payment method reference for the customer
          */
-        card?: Aifi.Model.Card;
+        card?: Aifi.Models.Card;
 
         /**
          * The customers local language code

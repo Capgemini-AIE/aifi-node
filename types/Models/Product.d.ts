@@ -1,6 +1,6 @@
 declare module 'aifi' {
   namespace Aifi {
-    namespace Model {
+    namespace Models {
       /**
        * The Customer object.
        */

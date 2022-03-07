@@ -11,15 +11,20 @@
 ///<reference path='./Models/Product.d.ts'/>
 
 // Resource Types
-// Admin resource
+// Admin resources
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />
-// Customer resource
+// Customer resources
 ///<reference path='./Customer/Contests.d.ts' />
 ///<reference path='./Customer/Customers.d.ts' />
+///<reference path='./Customer/EntryCodes.d.ts' />
 ///<reference path='./Customer/Orders.d.ts' />
+///<reference path='./Customer/PasswordReset.d.ts' />
 ///<reference path='./Customer/Products.d.ts' />
-// Orders resource
+
+// Store resource
+
+// Push resources
 
 declare module 'aifi' {
   export namespace Aifi {}
@@ -42,8 +47,10 @@ declare module 'aifi' {
     customer: {
       contests: Aifi.Customer.ContestsResource;
       customers: Aifi.Customer.CustomersResource;
-      products: Aifi.Customer.ProductsResource;
+      entrycodes: Aifi.Customer.EntryCodesResource;
       orders: Aifi.Customer.OrdersResource;
+      passwordreset: Aifi.Customer.PasswordResetResource;
+      products: Aifi.Customer.ProductsResource;
     };
 
     /**

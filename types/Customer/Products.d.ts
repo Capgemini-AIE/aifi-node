@@ -3,27 +3,27 @@ declare module 'aifi' {
     namespace Customer {
       interface ProductSearchParams {
         /**
-         * The customer's email address.
+         * Query search param.
          */
         query: string;
 
         /**
-         * The customer's email address.
+         * Return count.
          */
         count: number;
 
         /**
-         * The customer's first name.
+         * Offset.
          */
         offset?: number;
 
         /**
-         * The customer's last name.
+         * Order by filtering.
          */
         orderBy?: string;
 
         /**
-         * The customer's phone number.
+         * The list direction.
          */
         direction?: string;
       }

@@ -40,12 +40,12 @@ declare module 'aifi' {
         reset(
           params: PasswordResetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<>>;
+        ): Promise<Aifi.Response<>>; // TODO Question, how to return no response?
 
         set(
           params: PasswordSetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<>>;
+        ): Promise<Aifi.Response<>>; // TODO Question, how to return no response?
 
         verify(
           params: EntryCodeCreateParams,

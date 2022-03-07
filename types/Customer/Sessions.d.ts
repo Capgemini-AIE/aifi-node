@@ -8,7 +8,7 @@ declare module 'aifi' {
         email: string;
 
         /**
-         * Registered aifi user email address
+         * User password
          */
         password: string;
       }
@@ -22,7 +22,7 @@ declare module 'aifi' {
 
       class SessionsResource {
         /**
-         * Reset user password
+         * Session management
          */
         login(
           params: LoginSessionParams,

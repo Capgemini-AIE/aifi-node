@@ -21,7 +21,7 @@
 ///<reference path='./Customer/Orders.d.ts' />
 ///<reference path='./Customer/PasswordReset.d.ts' />
 ///<reference path='./Customer/Products.d.ts' />
-
+///<reference path='./Customer/Sessions.d.ts' />
 // Store resource
 
 // Push resources
@@ -51,6 +51,7 @@ declare module 'aifi' {
       orders: Aifi.Customer.OrdersResource;
       passwordreset: Aifi.Customer.PasswordResetResource;
       products: Aifi.Customer.ProductsResource;
+      sessions: Aifi.Customer.SessionsResource;
     };
 
     /**

@@ -33,6 +33,10 @@ declare module 'aifi' {
         token: string;
       }
 
+      interface PasswordResponse {
+        message: string;
+      }
+
       class PasswordResetResource {
         /**
          * Reset user password
@@ -40,12 +44,12 @@ declare module 'aifi' {
         reset(
           params: PasswordResetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<>>; // TODO Question, how to return no response?
+        ): Promise<Aifi.Response<PasswordResponse>>; // TODO Question, how to return no response?
 
         set(
           params: PasswordSetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<>>; // TODO Question, how to return no response?
+        ): Promise<Aifi.Response<PasswordResponse>>; // TODO Question, how to return no response?
 
         verify(
           params: EntryCodeCreateParams,

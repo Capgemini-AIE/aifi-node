@@ -1,46 +1,41 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Customer {
-      interface ProductCreateParams {
+      interface ProductSearchParams {
         /**
          * The customer's email address.
          */
-        email: string;
+        query: string;
 
         /**
          * The customer's email address.
          */
-        password: string;
+        count: number;
 
         /**
          * The customer's first name.
          */
-        firstName?: string;
+        offset?: number;
 
         /**
          * The customer's last name.
          */
-        lastName?: string;
+        orderBy?: string;
 
         /**
          * The customer's phone number.
          */
-        phone?: string;
-
-        /**
-         * A reference to a unique external identified for the customer.
-         */
-        externalId?: string;
+        direction?: string;
       }
 
       class ProductsResource {
         /**
          * Retrieves an auth token.
          */
-        create(
-          params: ProductCreateParams,
+        search(
+          params: ProductSearchParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Product>>;
+        ): Promise<Aifi.Response<Aifi.Models.Product[]>>;
       }
     }
   }

@@ -11,29 +11,19 @@ declare module 'aifi' {
         id: string;
 
         /**
-         * The customer's email address.
+         * Product name.
          */
-        email: string;
+        name: string;
 
         /**
          * The customer's first name.
          */
-        firstName?: string;
+        thumbnail?: string;
 
         /**
-         * The customer's last name.
+         * Rin identification
          */
-        lastName?: string;
-
-        /**
-         * The customer's phone number.
-         */
-        phone?: string;
-
-        /**
-         * A reference to a unique external identified for the customer.
-         */
-        externalId?: string;
+        rin?: string;
       }
     }
   }

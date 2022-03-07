@@ -13,7 +13,7 @@ declare module 'aifi' {
           params: Aifi.Models.PaginatedParams,
           options?: RequestOptions
         ): Promise<Aifi.Response<PaginatedListResponse>>;
-        // TODO: Pagination Questions?! How?!
+        // TODO - Have I correctly implemented the PaginatedListResponse correctly?
 
         retrieve(
           orderId: string, // ATT: Make sure id's are url encoded

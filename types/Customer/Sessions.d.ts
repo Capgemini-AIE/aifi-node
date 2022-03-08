@@ -27,7 +27,7 @@ declare module 'aifi' {
         login(
           params: LoginSessionParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<SessionsResponse>>;
+        ): Promise<Aifi.Response<SessionResponse>>;
 
         logout(
           params: object,

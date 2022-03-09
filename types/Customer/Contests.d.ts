@@ -25,7 +25,9 @@ declare module 'aifi' {
         create(
           params: ContestCreateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.ContestItem[]>>;
+        ): Promise<
+          Aifi.Response<Aifi.Models.ContestItem[] | Aifi.Models.Error>
+        >;
       }
     }
   }

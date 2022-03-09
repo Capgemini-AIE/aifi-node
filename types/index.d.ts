@@ -9,6 +9,7 @@
 ///<reference path='./Models/Order.d.ts'/>
 ///<reference path='./Models/Pagination.d.ts'/>
 ///<reference path='./Models/Product.d.ts'/>
+///<reference path='./Models/Error.d.ts'/>
 
 // Resource Types
 // Admin resources

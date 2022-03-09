@@ -4,7 +4,7 @@ declare module 'aifi' {
       /**
        * Standard Error Response Model
        */
-      interface ErrorResponse {
+      interface Error {
         /**
          *  Error message
          */

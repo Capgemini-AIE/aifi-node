@@ -29,13 +29,11 @@ declare module 'aifi' {
         password: string;
       }
 
-      interface PasswordVerifySuccessResponse {
+      interface SuccessResponse {
         token: string;
       }
 
-      interface PasswordResponse {
-        message: string;
-      }
+      interface EmptyResponse {}
 
       class PasswordResetResource {
         /**
@@ -44,17 +42,17 @@ declare module 'aifi' {
         reset(
           params: PasswordResetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<PasswordResponse>>; // TODO Question, how to return no response?
+        ): Promise<Aifi.Response<EmptyResponse>>;
 
         set(
           params: PasswordSetParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<PasswordResponse>>; // TODO Question, how to return no response?
+        ): Promise<Aifi.Response<EmptyResponse>>;
 
         verify(
           params: EntryCodeCreateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<PasswordVerifySuccessResponse>>;
+        ): Promise<Aifi.Response<SuccessResponse | Aifi.Models.Error>>;
       }
     }
   }

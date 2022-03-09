@@ -26,8 +26,6 @@
 ///<reference path='./Customer/Sessions.d.ts' />
 // Store resource
 
-// Push resources
-
 declare module 'aifi' {
   export namespace Aifi {}
 

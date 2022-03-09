@@ -11,7 +11,6 @@
 ///<reference path='./Models/Product.d.ts'/>
 ///<reference path='./Models/Error.d.ts'/>
 
-// Resource Types
 // Admin resources
 ///<reference path='./Admin/Auth.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />

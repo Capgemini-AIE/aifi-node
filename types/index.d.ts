@@ -21,6 +21,7 @@
 ///<reference path='./Customer/EntryCodes.d.ts' />
 ///<reference path='./Customer/Orders.d.ts' />
 ///<reference path='./Customer/PasswordReset.d.ts' />
+///<reference path='./Customer/Payments.d.ts' />
 ///<reference path='./Customer/Products.d.ts' />
 ///<reference path='./Customer/Sessions.d.ts' />
 // Store resource
@@ -51,6 +52,7 @@ declare module 'aifi' {
       entrycodes: Aifi.Customer.EntryCodesResource;
       orders: Aifi.Customer.OrdersResource;
       passwordreset: Aifi.Customer.PasswordResetResource;
+      payments: Aifi.Customer.PaymentResource;
       products: Aifi.Customer.ProductsResource;
       sessions: Aifi.Customer.SessionsResource;
     };

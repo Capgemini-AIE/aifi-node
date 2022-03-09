@@ -89,7 +89,7 @@ declare module 'aifi' {
         create(
           params: CustomerCreateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer | Aifi.Models.Error>>;
 
         // TODO ask question regarding response!?
         // in documentation response is access token
@@ -105,7 +105,7 @@ declare module 'aifi' {
           customerId: string,
           params?: CustomerUpdateParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Customer>>;
+        ): Promise<Aifi.Response<Aifi.Models.Customer | Aifi.Models.Error>>;
       }
     }
   }

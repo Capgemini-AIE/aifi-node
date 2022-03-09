@@ -18,12 +18,14 @@ declare module 'aifi' {
         retrieve(
           orderId: string, // ATT: Make sure id's are url encoded
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Order>>;
+        ): Promise<Aifi.Response<Aifi.Models.Order | Aifi.Models.Error>>;
 
         payment(
           orderId: string,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.PaymentDetails>>;
+        ): Promise<
+          Aifi.Response<Aifi.Models.PaymentDetails | Aifi.Models.Error>
+        >;
 
         listDrafts(
           params: Aifi.Models.PaginatedParams,
@@ -33,7 +35,7 @@ declare module 'aifi' {
         retrieveDraft(
           draftOrderID: string,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models.Order>>;
+        ): Promise<Aifi.Response<Aifi.Models.Order | Aifi.Models.Error>>;
       }
     }
   }

@@ -27,12 +27,12 @@ declare module 'aifi' {
         login(
           params: LoginSessionParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<SessionResponse>>;
+        ): Promise<Aifi.Response<SessionResponse | Aifi.Models.Error>>;
 
         logout(
           params: object,
           options?: RequestOptions
-        ): Promise<Aifi.Response<EmptyResponse>>; // TODO Question, how to return no response?
+        ): Promise<Aifi.Response<EmptyResponse>>;
 
         refresh(
           params: EntryCodeCreateParams,

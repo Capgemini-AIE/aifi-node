@@ -4,7 +4,7 @@ declare module 'aifi' {
       /**
        * The contest object.
        */
-      interface ContestItem {
+      interface ContestedItem {
         /**
          * TODO: What is rin, clarify??
          */
@@ -34,6 +34,33 @@ declare module 'aifi' {
          *  Reviewed quantity.
          */
         reviewedQuantity?: number;
+      }
+
+      interface ContestedOrder {
+        id: number;
+        orderId: number;
+        sessionId: number;
+        message: string;
+        status: Status;
+        order: SimpleOrderData[];
+      }
+
+      interface SimpleOrderData {
+        id: number;
+        customerId: number;
+        customerShoppingSessionId: number;
+        storeId: number;
+        transactionId: number;
+        externalId: string;
+        status: Status;
+        externalStatus;
+        updatedAt;
+        createdAt;
+      }
+
+      enum Status {
+        CONTESTED = 'contested',
+        REVIEWED = 'reviewed',
       }
     }
   }

@@ -1,21 +1,6 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Admin {
-      /**
-       * The Auth token object.
-       */
-      interface Auth {
-        /**
-         * The access token string
-         */
-        accessToken: string;
-
-        /**
-         * The token expiry date string
-         */
-        expiresAt: string;
-      }
-
       interface AuthTokenParams {
         /*
          * HMAC calculated from the whole url
@@ -100,7 +85,7 @@ declare module 'aifi' {
         retrieveToken(
           params: AuthTokenParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.Auth>>;
+        ): Promise<Aifi.Response<Aifi.Models.AccessToken>>;
       }
     }
   }

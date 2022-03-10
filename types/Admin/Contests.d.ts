@@ -1,14 +1,31 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Admin {
+      interface ContestedOrdersParams {
+        page: string;
+        pageSize: string;
+        orderId: number;
+        startTime: number;
+        endTime: number;
+        storeId: number;
+        status: Status[];
+      }
+
+      type Status = 'contested' | 'reviewed';
+
+      interface ContestsSuccessResponse {
+        contestedOrders: Aifi.Models;
+        pagination: Aifi.Models.PaginationResponse;
+      }
+
       class ContestsResource {
         /**
          * Retrieves an auth token.
          */
         retrieveToken(
-          params: AuthTokenParams,
+          params: ContestedOrdersParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Admin.Auth>>;
+        ): Promise<Aifi.Response<Aifi.Models>>;
       }
     }
   }

@@ -15,7 +15,7 @@ declare module 'aifi' {
         /**
          * Items array
          */
-        items: Aifi.Models.ContestItem[];
+        items: Aifi.Models.ContestedItem[];
       }
 
       class ContestsResource {
@@ -26,7 +26,7 @@ declare module 'aifi' {
           params: ContestCreateParams,
           options?: RequestOptions
         ): Promise<
-          Aifi.Response<Aifi.Models.ContestItem[] | Aifi.Models.Error>
+          Aifi.Response<Aifi.Models.ContestedItem[] | Aifi.Models.Error>
         >;
       }
     }

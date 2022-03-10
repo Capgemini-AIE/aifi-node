@@ -3,6 +3,7 @@
 ///<reference path='./Errors.d.ts' />
 
 // Models
+///<reference path='./Models/Auth.d.ts'/>
 ///<reference path='./Models/Contest.d.ts'/>
 ///<reference path='./Models/Customer.d.ts'/>
 ///<reference path='./Models/Card.d.ts'/>

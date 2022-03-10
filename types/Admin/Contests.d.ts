@@ -1,7 +1,7 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Admin {
-      interface ContestedOrdersParams {
+      interface PaginatedOrderParams {
         page: string;
         pageSize: string;
         orderId: number;
@@ -11,6 +11,18 @@ declare module 'aifi' {
         status: string[];
       }
 
+      interface ContestedOrderCreateParams {
+        orderId: number;
+        message: string;
+        items: Item[];
+      }
+
+      interface Item {
+        id: number;
+        productId: number;
+        contestedQuantity: number;
+      }
+
       interface ContestsSuccessResponse {
         contestedOrders: Aifi.Models.ContestedOrder[];
         pagination: Aifi.Models.PaginationResponse;
@@ -18,10 +30,15 @@ declare module 'aifi' {
 
       class ContestsResource {
         /**
-         * Retrieves an auth token.
+         * Contests Method Type Constructs.
          */
+        create(
+          params: CreateContestedOrderParams,
+          options?: RequestOptions
+        ): Promise<Aifi.Response<ContestsSuccessResponse>>;
+
         retrieve(
-          params: ContestedOrdersParams,
+          params: PaginatedOrderParams,
           options?: RequestOptions
         ): Promise<Aifi.Response<ContestsSuccessResponse>>;
       }

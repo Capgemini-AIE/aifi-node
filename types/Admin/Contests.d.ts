@@ -8,13 +8,13 @@ declare module 'aifi' {
         startTime: number;
         endTime: number;
         storeId: number;
-        status: Status[];
+        status: Status;
       }
 
-      type Status = 'contested' | 'reviewed';
+      type Status = ['contested' | 'reviewed'];
 
       interface ContestsSuccessResponse {
-        contestedOrders: Aifi.Models;
+        contestedOrders: Aifi.Models.ContestedOrder[];
         pagination: Aifi.Models.PaginationResponse;
       }
 
@@ -25,7 +25,7 @@ declare module 'aifi' {
         retrieveToken(
           params: ContestedOrdersParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response<Aifi.Models>>;
+        ): Promise<Aifi.Response<ContestsSuccessResponse>>;
       }
     }
   }

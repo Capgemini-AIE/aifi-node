@@ -13,7 +13,14 @@
 
 // Admin resources
 ///<reference path='./Admin/Auth.d.ts' />
+///<reference path='./Admin/Config.d.ts' />
+///<reference path='./Admin/Contests.d.ts' />
 ///<reference path='./Admin/Customers.d.ts' />
+///<reference path='./Admin/Orders.d.ts' />
+///<reference path='./Admin/Products.d.ts' />
+///<reference path='./Admin/Sessions.d.ts' />
+///<reference path='./Admin/Stores.d.ts' />
+///<reference path='./Admin/Tasks.d.ts' />
 // Customer resources
 ///<reference path='./Customer/Contests.d.ts' />
 ///<reference path='./Customer/Customers.d.ts' />
@@ -40,7 +47,14 @@ declare module 'aifi' {
      */
     admin: {
       auth: Aifi.Admin.AuthResource;
+      config: Aifi.Admin.ConfigResource;
+      contests: Aifi.Admin.ContestsResource;
       customers: Aifi.Admin.CustomersResource;
+      orders: Aifi.Admin.OrdersResource;
+      products: Aifi.Admin.ProductsResource;
+      sessions: Aifi.Admin.SessionsResource;
+      stores: Aifi.Admin.StoresResource;
+      tasks: Aifi.Admin.TasksResource;
     };
 
     customer: {

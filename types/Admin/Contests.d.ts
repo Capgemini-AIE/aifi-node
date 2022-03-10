@@ -8,10 +8,8 @@ declare module 'aifi' {
         startTime: number;
         endTime: number;
         storeId: number;
-        status: Status;
+        status: string[];
       }
-
-      type Status = ['contested' | 'reviewed'];
 
       interface ContestsSuccessResponse {
         contestedOrders: Aifi.Models.ContestedOrder[];
@@ -22,7 +20,7 @@ declare module 'aifi' {
         /**
          * Retrieves an auth token.
          */
-        retrieveToken(
+        retrieve(
           params: ContestedOrdersParams,
           options?: RequestOptions
         ): Promise<Aifi.Response<ContestsSuccessResponse>>;

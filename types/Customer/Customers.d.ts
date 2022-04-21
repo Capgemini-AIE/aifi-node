@@ -91,11 +91,6 @@ declare module 'aifi' {
           options?: RequestOptions
         ): Promise<Aifi.Response<Aifi.Models.Customer | Aifi.Models.Error>>;
 
-        // TODO ask question regarding response!?
-        // in documentation response is access token
-        // for our api we are already authed so we probably
-        // just want the customer details back?
-
         retrieve(
           customerId: string,
           options?: RequestOptions

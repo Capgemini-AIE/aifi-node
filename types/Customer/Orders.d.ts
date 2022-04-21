@@ -1,14 +1,21 @@
 declare module 'aifi' {
   namespace Aifi {
     namespace Customer {
+      /**
+       * Shape/structure for PaginatedListResponse
+       */
+      type PaginatedListResponse = Array<
+        Aifi.Models.Order[] | Aifi.Models.PaginationResponse
+      >;
+
       class OrdersResource {
         list(
           params: Aifi.Models.PaginatedParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response>;
+        ): Promise<Aifi.Response<PaginatedListResponse>>;
 
         retrieve(
-          orderId: string,
+          orderId: string, // ATT: Make sure id's are url encoded
           options?: RequestOptions
         ): Promise<Aifi.Response<Aifi.Models.Order | Aifi.Models.Error>>;
 
@@ -22,7 +29,7 @@ declare module 'aifi' {
         listDrafts(
           params: Aifi.Models.PaginatedParams,
           options?: RequestOptions
-        ): Promise<Aifi.Response>;
+        ): Promise<Aifi.Response<PaginatedListResponse>>;
 
         retrieveDraft(
           draftOrderID: string,

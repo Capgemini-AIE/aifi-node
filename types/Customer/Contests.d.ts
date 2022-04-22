@@ -5,15 +5,15 @@ declare module 'aifi' {
         /**
          * The order id to be contested
          */
-        orderId: string;
+        orderId: number;
 
         /**
-         * The customer's email address.
+         * Contest message
          */
         message: string;
 
         /**
-         * Items array
+         * Items to be contested array
          */
         items: Aifi.Models.ContestItem[];
       }

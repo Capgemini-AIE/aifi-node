@@ -13,7 +13,7 @@ declare module 'aifi' {
         message: string;
 
         /**
-         * Items to be contested array
+         * Array list of items/products to be contested
          */
         items: Aifi.Models.ContestItem[];
       }

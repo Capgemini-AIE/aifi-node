@@ -52,6 +52,7 @@
     "report": "nyc -r text -r lcov report",
     "release": "release-it",
     "test": "yarn lint && yarn test-typescript && yarn mocha",
+    "test:watch": "yarn test --watch",
     "test-typescript": "tsc --build types/test"
   },
   "devDependencies": {

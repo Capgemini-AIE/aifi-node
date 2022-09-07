@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/npm/v/aifi.svg)](https://www.npmjs.org/package/aifi)
 [![Build Status](https://github.com/Capgemini-AIE/aifi-node/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/Capgemini-AIE/aifi-node/actions/workflows/main.yml)
 
-The Aifi Node library provides convenient access to the Aifi API from
+The AiFi Node library provides convenient access to the [AiFi](https://aifi.com/) API from
 applications written in server-side JavaScript.
 
 ## Requirements

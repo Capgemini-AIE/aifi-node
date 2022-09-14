@@ -5,12 +5,12 @@ declare module 'aifi' {
         /**
          * The customer's email address.
          */
-        email: string;
+        email?: string;
 
         /**
          * The customer's email address.
          */
-        password: string;
+        password?: string;
 
         /**
          * The customer's first name.
